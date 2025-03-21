@@ -3,6 +3,13 @@ import streamlit as st
 import streamlit.components.v1 as components
 import uuid
 import requests  # For making API calls
+import os
+import yaml
+from dotenv import load_dotenv
+from openai import OpenAI
+
+# Load environment variables
+load_dotenv()
 
 # Access API key from Streamlit Secrets
 API_KEY = st.secrets["api_key"]
